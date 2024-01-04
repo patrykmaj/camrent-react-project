@@ -1,0 +1,557 @@
+// $color_white: white;
+
+// $c_bg_primary: #fff7ed;
+// $c_bg_secondary: #ffcc8d;
+// $c_bg_tertiary: #ffead0;
+
+// $c_text_primary: #161616;
+// $c_text_secondary: #4d4d4d;
+// $c_text_tertiary: #aaaaaa;
+// $c_text_error: red;
+
+// $c_button_primary: #ff8c38;
+
+// $color_1: #e17654;
+// $color_2: #115e59;
+// $color_3: #11385e;
+// $font-family_1: "Inter", sans-serif;
+
+$color_white: white;
+
+$c_bg_primary: #e4f7ff;
+$c_bg_secondary: #7bdaff;
+$c_bg_tertiary: #89deff;
+
+$c_text_primary: #161616;
+$c_text_secondary: #4d4d4d;
+$c_text_tertiary: #aaaaaa;
+$c_text_error: red;
+
+$c_button_primary: #ba5d00;
+
+$color_1: #7b1a1a;
+$color_2: #124918;
+$color_3: #123355;
+$font-family_1: "Inter", sans-serif;
+
+
+* {
+	box-sizing: border-box;
+}
+html {
+	margin: 0;
+	padding: 0;
+	background-color: $c_bg_primary;
+	font-family: $font-family_1;
+}
+body {
+	margin: 0;
+	padding: 0;
+	background-color: $c_bg_primary;
+	font-family: $font-family_1;
+	scrollbar-width: none;
+}
+a {
+	text-decoration: unset;
+	color: unset;
+}
+.site-wrapper {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+header {
+	height: 110px;
+	display: flex;
+	align-items: center;
+	padding-block: 10px;
+	.site-logo {
+		color: $c_text_primary;
+		margin-right: auto;
+		text-transform: uppercase;
+		font-weight: 900;
+		font-size: 25px;
+	}
+	a {
+		text-decoration: none;
+		color: $c_text_secondary;
+		font-weight: 600;
+		padding: 5px 20px;
+		&:hover {
+			color: $c_text_primary;
+			text-decoration: underline;
+		}
+	}
+	.login-icon {
+		height: 18px;
+		width: 18px;
+	}
+	.login-link {
+		display: inline-flex;
+		align-items: center;
+	}
+}
+nav {
+	display: flex;
+}
+main{
+	margin-bottom: 2em;
+}
+footer {
+	margin-top:auto ;
+	background-color: $c_text_primary;
+	color: $c_text_tertiary;
+	height: 74px;
+	display: flex;
+	flex-shrink: 0;
+	justify-content: center;
+	align-items: center;
+	font-weight: 500;
+}
+.link-button {
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	border: none;
+	padding: 0.75rem 1.375rem;
+	color: initial;
+	font-weight: 700;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: transform 0.1s ease-in-out;
+	&:hover {
+		transform: translate(1px, 1px);
+	}
+}
+.back-button {
+	display: block;
+	color: $c_text_primary;
+	text-decoration: none;
+	margin-left: 26px;
+	span {
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+/****** HOME PAGE ******/
+.home-hero {
+		background: linear-gradient(0deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)), url("./assets/images/home-hero.jpeg") no-repeat center center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		min-height: 350px;
+		height: 40vh;
+		color: $color_white;
+		padding: 17vh 15px;
+		text-align: center;
+	h1 {
+		font-weight: 700;
+		font-size: 2rem;
+	}
+}
+.home-container{
+	padding: 1em 2em ;
+}
+.home-page-content {
+	max-width: 900px;
+	margin: 0 auto;
+	color: $c_text_primary;
+	h1 {
+		line-height: 38px;
+	}
+	p {
+		line-height: 22px;
+	}
+}
+.home-page-cta {
+	max-width: 900px;
+	margin: 2em auto;
+	background-color: $c_bg_secondary;
+	color: $c_text_primary;
+	padding-inline: 32px;
+	padding-bottom: 32px;
+	border-radius: 5px;
+	h2 {
+		margin: 0;
+		padding-block: 37px;
+	}
+	.link-button {
+		background-color: $c_text_primary;
+		color: $color_white;
+		border-radius: 10px;
+	}
+}
+
+/****** CAMERAS PAGE ******/
+.camera-list-container {
+	padding-inline: 23px;
+	button {
+		margin-right: 20px;
+		cursor: pointer;
+	}
+}
+.camera-list-filter-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	>a {
+		margin-right: 15px;
+	}
+}
+.camera-list {
+	display: grid;
+	align-content: stretch;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	justify-items: center;
+	justify-content: space-around;
+	gap: 34px;
+	margin-top: 57px;
+}
+.camera-tile {
+	width: 100%;
+	a {
+		color: $c_text_primary;
+		text-decoration: none;
+	}
+	img {
+		max-width: 100%;
+		height: 400px;
+		object-fit: cover;
+		border-radius: 5px;
+	}
+}
+.camera-type {
+	height: 34px;
+	padding: 6px 26px;
+	font-style: normal;
+	font-weight: 500;
+	border: none;
+	border-radius: 5px;
+	background-color: $c_bg_tertiary;
+	color: $c_text_secondary;
+	transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
+	&:hover {
+		color: $c_bg_tertiary;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+.camera-type.selected {
+	color: $color_white;
+}
+.camera-type.digital {
+	&:hover {
+		background-color: $color_1;
+	}
+}
+.camera-type.digital.selected {
+	background-color: $color_1;
+}
+.camera-type.movie {
+	&:hover {
+		background-color: $color_2;
+	}
+}
+.camera-type.movie.selected {
+	background-color: $color_2;
+}
+.camera-type.sport {
+	&:hover {
+		background-color: $c_text_primary;
+	}
+}
+.camera-type.sport.selected {
+	background-color: $color_3;
+}
+.camera-type.clear-filters {
+	margin-left: -20px;
+	height: 34px;
+	padding: 6px 26px;
+	font-style: normal;
+	font-weight: 500;
+	border: none;
+	border-radius: 5px;
+	text-decoration: underline;
+	background-color: transparent;
+	color: $c_text_secondary;
+}
+i[class*="camera-type-"] {
+	padding: 7px 14px;
+}
+.camera-detail-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-inline: 27px;
+	.back-button {
+		color: $c_text_primary;
+		text-decoration: none;
+		&:visited {
+			color: $c_text_primary;
+		}
+		span {
+			text-decoration: underline;
+		}
+	}
+}
+.camera-detail {
+	display: flex;
+	flex-direction: column;
+	color: $c_text_primary;
+	img {
+		max-width: 500px;
+		border-radius: 5px;
+		margin-block: 47px;
+	}
+	h2 {
+		font-size: 2rem;
+		margin-bottom: 10px;
+	}
+	>i {
+		align-self: flex-start;
+	}
+	.camera-price {
+		font-size: 1.25rem;
+		margin-bottom: 10px;
+		span {
+			font-weight: 700;
+			font-size: 1.5rem;
+		}
+	}
+	.link-button {
+		background-color: $c_button_primary;
+		color: $color_white;
+		font-size: 1.125rem;
+	}
+}
+
+/****** USER PAGE ******/
+.host-nav {
+	display: flex;
+	margin-bottom: 30px;
+	a {
+		text-decoration: none;
+		color: $c_text_secondary;
+		font-weight: 500;
+		padding: 5px 20px;
+		&:hover {
+			color: $c_text_primary;
+			text-decoration: underline;
+			font-weight: 600;
+		}
+	}
+}
+.host-camera-link-wrapper {
+	color: unset;
+	text-decoration: unset;
+}
+
+/****** USER/DASHBOARD PAGE ******/
+.host-dashboard-info {
+	background-color: $c_bg_tertiary;
+	padding: 37px 26px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	>h1 {
+		font-size: 36px;
+		color: $c_text_primary;
+		margin: 0;
+	}
+	>p {
+		color: $c_text_secondary;
+		>span {
+			text-decoration: underline;
+			font-weight: bold;
+		}
+	}
+	>h2 {
+		margin: 0;
+		font-size: 38px;
+		color: $c_text_primary;
+		font-weight: 900;
+	}
+}
+.host-dashboard-cameras {
+	padding: 38px 26px;
+	>.top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.host-cameras-list {
+		padding-inline: 0;
+	}
+}
+
+
+/****** USER/CAMERAS PAGE ******/
+.host-cameras-list {
+	padding-inline: 26px;
+}
+.host-cameras-title {
+	padding-inline: 26px;
+}
+.host-camera-single {
+	display: flex;
+	align-items: center;
+	background-color: $color_white;
+	margin-bottom: 15px;
+	padding: 18px 24px;
+	>img {
+		height: 70px;
+		border-radius: 5px;
+		margin-right: 17px;
+	}
+}
+.host-camera-info {
+	margin-right: auto;
+	h3 {
+		font-size: 20px;
+		font-weight: 600;
+		margin-block: 10px;
+	}
+	p {
+		margin-block: 10px;
+	}
+}
+
+/****** USER/CAMERAS/DETAILS PAGE ******/
+.host-camera-detail-layout-container {
+	background-color: $color_white;
+	padding: 24px;
+	margin: 30px 26px;
+}
+.host-camera-detail {
+	display: flex;
+	align-items: center;
+	>img {
+		height: 160px;
+		border-radius: 5px;
+		margin-right: 20px;
+	}
+}
+.host-camera-detail-info-text {
+	>h3 {
+		margin-top: 24px;
+		margin-bottom: 5px;
+		font-size: 26px;
+		font-weight: 700;
+	}
+	>h4 {
+		font-size: 20px;
+		margin-block: 0;
+	}
+}
+.host-camera-detail-nav {
+	display: flex;
+	margin-block: 25px;
+	a {
+		text-decoration: none;
+		color: $c_text_secondary;
+		font-weight: 500;
+		padding: 5px 20px;
+		&:first-of-type {
+			text-decoration: none;
+			color: $c_text_secondary;
+			font-weight: 500;
+			padding: 5px 15px;
+			margin-left: -15px;
+		}
+		&:hover {
+			color: $c_text_primary;
+			text-decoration: underline;
+			font-weight: 700;
+		}
+	}
+}
+.host-camera-detail-info {
+	>h4 {
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 21px;
+		>span {
+			font-weight: 500;
+		}
+	}
+}
+.host-camera-price {
+	font-size: 24px;
+	font-weight: 500;
+	>span {
+		font-size: 16px;
+		color: $c_text_secondary;
+	}
+}
+.host-camera-movies{
+	text-decoration: underline;
+}
+.host-camera-detail-image {
+	height: 100px;
+	border-radius: 5px;
+}
+/****** ERROR PAGE ******/
+.not-found-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	text-align: center;
+	padding-inline: 26px;
+	.link-button {
+		min-width: 300px;
+		width: 20%;
+		background-color: $c_text_primary;
+		color: $color_white;
+	}
+}
+
+/****** LOGIN PAGE ******/
+.login-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-inline: 27px;
+}
+.login-form {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 500px;
+	>input {
+		border: 1px solid rgba(209, 213, 219);
+		height: 40px;
+		text-indent: 10px;
+		font-family: $font-family_1;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+		font-weight: 400;
+		&:focus {
+			outline: none;
+		}
+		&:first-of-type {
+			border-radius: 6px 6px 0px 0px;
+		}
+		&:last-of-type {
+			border-radius: 0px 0px 6px 6px;
+			border-top: none;
+		}
+	}
+	>button {
+		background-color: $c_button_primary;
+		border: none;
+		border-radius: 6px;
+		height: 55px;
+		margin-top: 22px;
+		color: $color_white;
+		font-family: $font-family_1;
+		cursor: pointer;
+		&:disabled {
+			background-color: $c_text_tertiary;
+			cursor: not-allowed;
+		}
+	}
+}
+.login-error {
+	color: $c_text_error;
+}
+
