@@ -1,2 +1,9 @@
-# camrent-react-project
-React camera rental page (routing, firebase, scss)
+# CAMRENT
+
+Camera rental page prototype made in **React** 
+
+Page uses:
+- routing,
+- firebase,
+- scss,
+  
