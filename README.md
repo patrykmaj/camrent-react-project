@@ -6,4 +6,3 @@ Page uses:
 - routing,
 - firebase,
 - scss,
-  
